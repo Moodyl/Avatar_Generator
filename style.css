@@ -1,0 +1,57 @@
+        body {
+            background-color: rgb(255, 255, 255);
+            margin: 0px;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        .container {
+            width: 400px;
+            height: 400px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin-top: -200px;
+            margin-left: -200px;
+        }
+
+        .faccia {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+        }
+
+        .naso {
+            position: absolute;
+            width: 50%;
+            height: 50%;
+            left: 25%;
+            top: 23%;
+        }
+        
+        .bocca {
+            position: absolute;
+            width: 60%;
+            height: 25%;
+            left: 20%;
+            top: 63%;
+        }
+        
+        .occhio {
+            
+            position: absolute;
+            width: 30%;
+            height: 30%;
+            top: 15%;
+        }
+
+        .sx {
+            left: 9%;
+        }
+
+        .dx {
+            right: 9%;
+        }

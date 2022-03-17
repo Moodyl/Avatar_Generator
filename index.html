@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        .interfaccia {
+            background-color: rgb(100, 100, 255);
+            position: absolute;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            padding: 15px;
+        }
+
+        .interfaccia input {
+            width: 200px;
+            height: 1px;
+            appearance: none;
+            border: none;
+            background-color: black;
+            display: block;
+            margin-bottom: 20px;
+        }
+
+        .interfaccia input[type="text"] {
+            height: initial;
+            background-color: white;
+        }
+
+        .interfaccia select {
+            width: 100%;
+            display: block;
+        }
+    </style>
+    <title>Il titoletto</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="faccia">
+            <img src="Asset/faccia_1.png" alt="">
+        </div>
+        <div class="bocca">
+            <img src="Asset/bocca_1.png" alt="">
+        </div>
+        <div class="naso">
+            <img src="Asset/naso_1.png" alt="">
+        </div>
+        <div class="occhio dx">
+            <img src="Asset/occhio_dx_1.png" alt="">
+        </div>
+        <div class="occhio sx">
+            <img src="Asset/occhio_sx_1.png" alt="">
+        </div>
+
+    </div>
+    <div class="interfaccia">
+
+        <label for="#faccia">Faccia</label>
+        <input type="range" name="faccia" id="faccia" min="0" max="3" step="1" value="0">
+
+        <label for="#occhio_dx">Occhio dx</label>
+        
+
+        <label for="#occhio_sx">Occhio sx</label>
+        <input type="range" name="occhio_sx" id="occhio_sx" min="0" max="3" step="1" value="0">
+
+        <label for="#naso">Naso</label>
+        <select id="naso">
+            <option value="0">Naso 1</option>
+            <option value="1">Naso 2</option>
+            <option value="2">Naso 3</option>
+            <option value="3">Naso 4</option>
+        </select>
+
+        <label for="#bocca">Bocca</label>
+        <input type="text" name="bocca" id="bocca" min="0" max="3" step="1" value="0">
+
+    </div>
+    <script>
+        document.querySelector("#faccia").addEventListener("input", function(e){
+            const faccia = e.target.value
+            document.querySelector(".faccia img").src = "Asset/faccia_" + faccia + ".png"
+        })
+        document.querySelector("#naso").addEventListener("change", function(e){
+            const naso = e.target.value
+            document.querySelector(".naso img").src = "Asset/naso_" + naso + ".png"
+        })
+        document.querySelector("#bocca").addEventListener("change", function(e){
+            const bocca = e.target.value
+            document.querySelector(".bocca img").src = "Asset/bocca_" + bocca + ".png"
+        })
+
+
+        
+    </script>
+</body>
+
+</html>

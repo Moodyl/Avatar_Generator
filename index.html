@@ -6,100 +6,352 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        }
-
-        .interfaccia {
-            background-color: rgb(134, 100, 255);
-            position: absolute;
-            right: 0;
-            top: 0;
-            bottom: 0;
-            padding: 15px;
-        }
-
-        .interfaccia input {
-            width: 200px;
-            height: 1px;
-            appearance: none;
-            border: none;
-            background-color: black;
-            display: block;
-            margin-bottom: 20px;
-        }
-
-        .interfaccia input[type="text"] {
-            height: initial;
-            background-color: white;
-        }
-
-        .interfaccia select {
-            width: 100%;
-            display: block;
-        }
-    </style>
-    <title>Il titoletto</title>
+    <link rel="stylesheet" href="jquery-ui.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="jquery-ui.min.js"></script>
+    <title>Grabbaffiti</title>
 </head>
 
 <body>
-    <div class="container">
-        <div class="faccia">
-            <img src="asset/faccia_1.png" alt="">
-        </div>
-        <div class="bocca">
-            <img src="asset/bocca_1.png" alt="">
-        </div>
-        <div class="naso">
-            <img src="asset/naso_1.png" alt="">
-        </div>
-        <div class="occhio dx">
-            <img src="asset/occhio_dx_1.png" alt="">
-        </div>
-        <div class="occhio sx">
-            <img src="asset/occhio_sx_1.png" alt="">
+    <header><a href="https://xd-supsi.github.io/avatargenerator">INDEX</a><h1>Grabbaffiti</h1></header>
+
+    <div class="background">
+        <span class="tip">Tip: Move things by dragging them with your mouse</span>
+        <div class="container">
+            <div class="cappello">
+                <img src="asset/cappello_0.svg" alt="">
+            </div>
+            <div class="faccia">
+                <img src="asset/faccia_0.svg" alt="">
+            </div>
+            <div class="bocca">
+                <img src="asset/bocca_0.svg" alt="">
+            </div>
+            <div class="occhio dx">
+                <img src="asset/occhio_0.svg" alt="">
+            </div>
+            <div class="occhio sx">
+                <img src="asset/occhio_0.svg" alt="">
+            </div>
         </div>
 
     </div>
+
     <div class="interfaccia">
 
-        <label for="#faccia">Faccia</label>
-        <input type="range" name="faccia" id="faccia" min="0" max="3" step="1" value="0">
+        <nav>
+            <input type="radio" name="menu_icon" id="faccia_menu_icon" class="faccia" checked>
+            <label for="faccia_menu_icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                    <path
+                        d="M512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256zM176.4 176C158.7 176 144.4 190.3 144.4 208C144.4 225.7 158.7 240 176.4 240C194 240 208.4 225.7 208.4 208C208.4 190.3 194 176 176.4 176zM336.4 240C354 240 368.4 225.7 368.4 208C368.4 190.3 354 176 336.4 176C318.7 176 304.4 190.3 304.4 208C304.4 225.7 318.7 240 336.4 240z" />
+                </svg>
+            </label>
 
-        <label for="#occhio_dx">Occhio dx</label>
-        
+            <input type="radio" name="menu_icon" id="occhi_menu_icon" class="occhi">
+            <label for="occhi_menu_icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                    <path
+                        d="M279.6 160.4C282.4 160.1 285.2 160 288 160C341 160 384 202.1 384 256C384 309 341 352 288 352C234.1 352 192 309 192 256C192 253.2 192.1 250.4 192.4 247.6C201.7 252.1 212.5 256 224 256C259.3 256 288 227.3 288 192C288 180.5 284.1 169.7 279.6 160.4zM480.6 112.6C527.4 156 558.7 207.1 573.5 243.7C576.8 251.6 576.8 260.4 573.5 268.3C558.7 304 527.4 355.1 480.6 399.4C433.5 443.2 368.8 480 288 480C207.2 480 142.5 443.2 95.42 399.4C48.62 355.1 17.34 304 2.461 268.3C-.8205 260.4-.8205 251.6 2.461 243.7C17.34 207.1 48.62 156 95.42 112.6C142.5 68.84 207.2 32 288 32C368.8 32 433.5 68.84 480.6 112.6V112.6zM288 112C208.5 112 144 176.5 144 256C144 335.5 208.5 400 288 400C367.5 400 432 335.5 432 256C432 176.5 367.5 112 288 112z" />
+                </svg>
+            </label>
 
-        <label for="#occhio_sx">Occhio sx</label>
-        <input type="range" name="occhio_sx" id="occhio_sx" min="0" max="3" step="1" value="0">
+            <input type="radio" name="menu_icon" id="bocca_menu_icon" class="bocca">
+            <label for="bocca_menu_icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                    <path
+                        d="M480 32H96C42.98 32 0 74.98 0 128v256c0 53.02 42.98 96 96 96h384c53.02 0 96-42.98 96-96V128C576 74.98 533 32 480 32zM144 336C144 362.5 122.5 384 96 384s-48-21.5-48-48v-32C48 295.1 55.13 288 64 288h64c8.875 0 16 7.125 16 16V336zM144 240C144 248.9 136.9 256 128 256H64C55.13 256 48 248.9 48 240v-32C48 181.5 69.5 160 96 160s48 21.5 48 48V240zM272 336C272 362.5 250.5 384 224 384s-48-21.5-48-48v-32C176 295.1 183.1 288 192 288h64c8.875 0 16 7.125 16 16V336zM272 242.3C272 249.9 265.9 256 258.3 256H189.7C182.1 256 176 249.9 176 242.3V176C176 149.5 197.5 128 224 128s48 21.54 48 48V242.3zM400 336c0 26.5-21.5 48-48 48s-48-21.5-48-48v-32C304 295.1 311.1 288 320 288h64c8.875 0 16 7.125 16 16V336zM400 242.3C400 249.9 393.9 256 386.3 256h-68.57C310.1 256 304 249.9 304 242.3V176C304 149.5 325.5 128 352 128s48 21.54 48 48V242.3zM528 336c0 26.5-21.5 48-48 48s-48-21.5-48-48v-32C432 295.1 439.1 288 448 288h64c8.875 0 16 7.125 16 16V336zM528 240C528 248.9 520.9 256 512 256h-64c-8.875 0-16-7.125-16-16v-32C432 181.5 453.5 160 480 160s48 21.5 48 48V240z" />
+                </svg>
+            </label>
 
-        <label for="#naso">Naso</label>
-        <select id="naso">
-            <option value="0">Naso 1</option>
-            <option value="1">Naso 2</option>
-            <option value="2">Naso 3</option>
-            <option value="3">Naso 4</option>
-        </select>
+            <input type="radio" name="menu_icon" id="cappello_menu_icon" class="cappello">
+            <label for="cappello_menu_icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+                    <path
+                        d="M489.1 264.9C480.5 207.5 450.5 32 392.3 32c-14 0-26.58 5.875-37.08 14c-20.75 15.87-49.62 15.87-70.5 0C274.2 38 261.7 32 247.7 32c-58.25 0-88.27 175.5-97.77 232.9C188.7 277.5 243.7 288 319.1 288S451.2 277.5 489.1 264.9zM632.9 227.7c-6.125-4.125-14.2-3.51-19.7 1.49c-1 .875-101.3 90.77-293.1 90.77c-190.9 0-292.2-89.99-293.2-90.86c-5.5-4.875-13.71-5.508-19.71-1.383c-6.125 4.125-8.587 11.89-6.087 18.77C1.749 248.5 78.37 448 319.1 448s318.2-199.5 318.1-201.5C641.5 239.6 639 231.9 632.9 227.7z" />
+                </svg>
+            </label>
+        </nav>
 
-        <label for="#bocca">Bocca</label>
-        <input type="text" name="bocca" id="bocca" min="0" max="3" step="1" value="0">
+        <div id="menu-faccia" class="menus">
+
+            <input type="radio" name="faccia" id="faccia_0">
+            <label for="faccia_0">
+                <img src="asset/faccia_0.svg" alt="" srcset="">
+            </label>
+
+            <input type="radio" name="faccia" id="faccia_1">
+            <label for="faccia_1">
+                <img src="asset/faccia_1.svg" alt="" srcset="">
+            </label>
+
+            <input type="radio" name="faccia" id="faccia_2">
+            <label for="faccia_2">
+                <img src="asset/faccia_2.svg" alt="" srcset="">
+            </label>
+
+            <input type="radio" name="faccia" id="faccia_3">
+            <label for="faccia_3">
+                <img src="asset/faccia_3.svg" alt="" srcset="">
+            </label>
+
+            <input type="radio" name="faccia" id="faccia_4">
+            <label for="faccia_4">
+                <img src="asset/faccia_4.svg" alt="" srcset="">
+            </label>
+
+            <input type="radio" name="faccia" id="faccia_5">
+            <label for="faccia_5">
+                <img src="asset/faccia_5.svg" alt="" srcset="">
+            </label>
+        </div>
+
+        <div id="menu-occhi" class="menus">
+            <div class="destro">
+                <span>Occhio destro</span>
+                <input type="radio" name="occhio_dx" id="occhio_0">
+                <label for="occhio_0">
+                    <img src="asset/occhio_0.svg" alt="" srcset="">
+                </label>
+
+                <input type="radio" name="occhio_dx" id="occhio_1">
+                <label for="occhio_1">
+                    <img src="asset/occhio_1.svg" alt="" srcset="">
+                </label>
+
+                <input type="radio" name="occhio_dx" id="occhio_2">
+                <label for="occhio_2">
+                    <img src="asset/occhio_2.svg" alt="" srcset="">
+                </label>
+
+                <input type="radio" name="occhio_dx" id="occhio_3">
+                <label for="occhio_3">
+                    <img src="asset/occhio_3.svg" alt="" srcset="">
+                </label>
+
+                <input type="radio" name="occhio_dx" id="occhio_4">
+                <label for="occhio_4">
+                    <img src="asset/occhio_4.svg" alt="" srcset="">
+                </label>
+
+                <input type="radio" name="occhio_dx" id="occhio_5">
+                <label for="occhio_5">
+                    <img src="asset/occhio_5.svg" alt="" srcset="">
+                </label>
+
+                <input type="radio" name="occhio_dx" id="occhio_6">
+                <label for="occhio_6">
+                    <img src="asset/occhio_6.svg" alt="" srcset="">
+                </label>
+
+                <input type="radio" name="occhio_dx" id="occhio_7">
+                <label for="occhio_7">
+                    <img src="asset/occhio_7.svg" alt="" srcset="">
+                </label>
+
+                <input type="radio" name="occhio_dx" id="occhio_8">
+                <label for="occhio_8">
+                    <img src="asset/occhio_8.svg" alt="" srcset="">
+                </label>
+
+                <input type="radio" name="occhio_dx" id="occhio_9">
+                <label for="occhio_9">
+                    <img src="asset/occhio_9.svg" alt="" srcset="">
+                </label>
+
+                <input type="radio" name="occhio_dx" id="occhio_10">
+                <label for="occhio_10">
+                    <img src="asset/occhio_10.svg" alt="" srcset="">
+                </label>
+                <input type="radio" name="occhio_dx" id="occhio_11">
+                <label for="occhio_11">
+                    <img src="asset/occhio_11.svg" alt="" srcset="">
+                </label>
+            </div>
+
+            <div class="sinistro">
+                <span>Occhio sinistro</span>
+                <input type="radio" name="occhio_sx" id="occhio_0_dup">
+                <label for="occhio_0_dup">
+                    <img src="asset/occhio_0_dup.svg" alt="" srcset="">
+                </label>
+
+                <input type="radio" name="occhio_sx" id="occhio_1_dup">
+                <label for="occhio_1_dup">
+                    <img src="asset/occhio_1_dup.svg" alt="" srcset="">
+                </label>
+
+                <input type="radio" name="occhio_sx" id="occhio_2_dup">
+                <label for="occhio_2_dup">
+                    <img src="asset/occhio_2_dup.svg" alt="" srcset="">
+                </label>
+
+                <input type="radio" name="occhio_sx" id="occhio_3_dup">
+                <label for="occhio_3_dup">
+                    <img src="asset/occhio_3_dup.svg" alt="" srcset="">
+                </label>
+
+                <input type="radio" name="occhio_sx" id="occhio_4_dup">
+                <label for="occhio_4_dup">
+                    <img src="asset/occhio_4_dup.svg" alt="" srcset="">
+                </label>
+
+                <input type="radio" name="occhio_sx" id="occhio_5_dup">
+                <label for="occhio_5_dup">
+                    <img src="asset/occhio_5_dup.svg" alt="" srcset="">
+                </label>
+
+                <input type="radio" name="occhio_sx" id="occhio_6_dup">
+                <label for="occhio_6_dup">
+                    <img src="asset/occhio_6_dup.svg" alt="" srcset="">
+                </label>
+
+                <input type="radio" name="occhio_sx" id="occhio_7_dup">
+                <label for="occhio_7_dup">
+                    <img src="asset/occhio_7_dup.svg" alt="" srcset="">
+                </label>
+
+                <input type="radio" name="occhio_sx" id="occhio_8_dup">
+                <label for="occhio_8_dup">
+                    <img src="asset/occhio_8_dup.svg" alt="" srcset="">
+                </label>
+
+                <input type="radio" name="occhio_sx" id="occhio_9_dup">
+                <label for="occhio_9_dup">
+                    <img src="asset/occhio_9_dup.svg" alt="" srcset="">
+                </label>
+
+                <input type="radio" name="occhio_sx" id="occhio_10_dup">
+                <label for="occhio_10_dup">
+                    <img src="asset/occhio_10_dup.svg" alt="" srcset="">
+                </label>
+                <input type="radio" name="occhio_sx" id="occhio_11_dup">
+                <label for="occhio_11_dup">
+                    <img src="asset/occhio_11_dup.svg" alt="" srcset="">
+                </label>
+            </div>
+        </div>
+
+        <div id="menu-bocca" class="menus">
+
+            <input type="radio" name="bocca" id="bocca_0">
+            <label for="bocca_0">
+                <img src="asset/bocca_0.svg" alt="" srcset="">
+            </label>
+
+            <input type="radio" name="bocca" id="bocca_1">
+            <label for="bocca_1">
+                <img src="asset/bocca_1.svg" alt="" srcset="">
+            </label>
+
+            <input type="radio" name="bocca" id="bocca_2">
+            <label for="bocca_2">
+                <img src="asset/bocca_2.svg" alt="" srcset="">
+            </label>
+
+            <input type="radio" name="bocca" id="bocca_3">
+            <label for="bocca_3">
+                <img src="asset/bocca_3.svg" alt="" srcset="">
+            </label>
+
+            <input type="radio" name="bocca" id="bocca_4">
+            <label for="bocca_4">
+                <img src="asset/bocca_4.svg" alt="" srcset="">
+            </label>
+
+            <input type="radio" name="bocca" id="bocca_5">
+            <label for="bocca_5">
+                <img src="asset/bocca_5.svg" alt="" srcset="">
+            </label>
+            <input type="radio" name="bocca" id="bocca_6">
+            <label for="bocca_6">
+                <img src="asset/bocca_6.svg" alt="" srcset="">
+            </label>
+            <input type="radio" name="bocca" id="bocca_7">
+            <label for="bocca_7">
+                <img src="asset/bocca_7.svg" alt="" srcset="">
+            </label>
+        </div>
+
+        <div id="menu-cappello" class="menus">
+
+            <input type="radio" name="cappello" id="cappello_0">
+            <label for="cappello_0">
+                <img src="asset/cappello_0.svg" alt="" srcset="">
+            </label>
+
+            <input type="radio" name="cappello" id="cappello_1">
+            <label for="cappello_1">
+                <img src="asset/cappello_1.svg" alt="" srcset="">
+            </label>
+
+            <input type="radio" name="cappello" id="cappello_2">
+            <label for="cappello_2">
+                <img src="asset/cappello_2.svg" alt="" srcset="">
+            </label>
+
+            <input type="radio" name="cappello" id="cappello_3">
+            <label for="cappello_3">
+                <img src="asset/cappello_3.svg" alt="" srcset="">
+            </label>
+
+            <input type="radio" name="cappello" id="cappello_4">
+            <label for="cappello_4">
+                <img src="asset/cappello_4.svg" alt="" srcset="">
+            </label>
+
+            <input type="radio" name="cappello" id="cappello_5">
+            <label for="cappello_5">
+                <img src="asset/cappello_5.svg" alt="" srcset="">
+            </label>
+            <input type="radio" name="cappello" id="cappello_6">
+            <label for="cappello_6">
+                <img src="asset/cappello_6.svg" alt="" srcset="">
+            </label>
+
+            <input type="range" name="Y-cappello" id="Y-cappello" min="-30%" max="-15%">
+
+        </div>
 
     </div>
+
     <script>
-        document.querySelector("#faccia").addEventListener("input", function(e){
-            const faccia = e.target.value
-            document.querySelector(".faccia img").src = "asset/faccia_" + faccia + ".png"
-        })
-        document.querySelector("#naso").addEventListener("change", function(e){
-            const naso = e.target.value
-            document.querySelector(".naso img").src = "asset/naso_" + naso + ".png"
-        })
-        document.querySelector("#bocca").addEventListener("change", function(e){
-            const bocca = e.target.value
-            document.querySelector(".bocca img").src = "asset/bocca_" + bocca + ".png"
-        })
+        $(document).ready(function () {
 
+            $("#menu-faccia").siblings("div").hide()
 
+            $("input[name='menu_icon']").on("change", function(){
+                const menu = $(this).attr("class")
+                $("#menu-" + menu).show().siblings("div").hide()
+            })
+
+            $("input[name='faccia']").on("change", function () {
+                const faccia = $(this).attr("id")
+                $(".faccia img").attr("src", "asset/" + faccia + ".svg")
+            })
+            $("input[name='occhio_dx']").on("change", function () {
+                const occhio_dx = $(this).attr("id")
+                $(".occhio.dx img").attr("src", "asset/" + occhio_dx + ".svg")
+            })
+            $("input[name='occhio_sx']").on("change", function () {
+                const occhio_sx = $(this).attr("id")
+                $(".occhio.sx img").attr("src", "asset/" + occhio_sx + ".svg")
+            })
+            $("input[name='bocca']").on("change", function () {
+                const bocca = $(this).attr("id")
+                $(".bocca img").attr("src", "asset/" + bocca + ".svg")
+            })
+            $("input[name='cappello']").on("change", function () {
+                const cappello = $(this).attr("id")
+                $(".cappello img").attr("src", "asset/" + cappello + ".svg")
+            })
+
+            $(".container div, .tip").draggable()
+            $(".container div, .tip").hover( function() {
+                $(this).css("cursor","grab");
+            })
+
+        })
         
     </script>
 </body>

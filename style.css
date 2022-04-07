@@ -1,57 +1,199 @@
-        body {
-            background-color: rgb(255, 255, 255);
-            margin: 0px;
-        }
+                * {
+                    transition: all 0.2s;
+                }
+                body {
+                    background-color: rgb(255, 255, 255);
+                    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                    margin: 0;
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    flex-flow: row wrap;
+                    justify-content: space-between;
+                }
 
-        img {
-            width: 100%;
-            height: auto;
-        }
+                header {
+                    display: flex;
+                    flex-flow: row nowrap;
+                    flex-basis: 100%;
+                    padding: 15px 25px;
+                    align-items: center;
+                    column-gap: 30px;
+                    border-bottom: 1px solid black;
+                }
 
-        .container {
-            width: 400px;
-            height: 400px;
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            margin-top: -200px;
-            margin-left: -200px;
-        }
+                img {
+                    width: 100%;
+                    height: auto;
+                }
 
-        .faccia {
-            width: 100%;
-            height: 100%;
-            position: absolute;
-        }
+                a {
+                    display: block;
+                    font-size: 12px;
+                }
 
-        .naso {
-            position: absolute;
-            width: 50%;
-            height: 50%;
-            left: 25%;
-            top: 23%;
-        }
-        
-        .bocca {
-            position: absolute;
-            width: 60%;
-            height: 25%;
-            left: 20%;
-            top: 63%;
-        }
-        
-        .occhio {
-            
-            position: absolute;
-            width: 30%;
-            height: 30%;
-            top: 15%;
-        }
+                h1 {
+                    margin: 0;
+                    padding: 0;
+                    font-size: 42px;
+                }
 
-        .sx {
-            left: 9%;
-        }
+                .interfaccia {
+                    padding: 15px;
+                    height: 100vh;
+                    border-left: 1px solid black;
+                    width: 400px;
+                }
 
-        .dx {
-            right: 9%;
-        }
+                .interfaccia nav {
+                    display: flex;
+                    flex-wrap: nowrap;
+                    justify-content: space-between;
+                    flex-flow: row;
+                    padding-bottom: 15px;
+                    margin-bottom: 15px;
+                    border-bottom: 1px black solid;
+                    column-gap: 2%;
+                }
+
+                .interfaccia nav label {
+                    flex-basis: 90%;
+                    padding: 10px 0px;
+                }
+/*
+                .interfaccia nav *{
+                    outline: #000 solid 1px;
+                }
+*/
+                .interfaccia nav svg {
+                    display: block;
+                    width: auto;
+                    height: 30px;
+                    margin: 0 auto;
+                }
+
+                div.menus {
+                    display: flex;
+                    flex-wrap: wrap;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    gap: 10px;
+                }
+
+                #menu-occhi {
+                    flex-direction: column;
+                }
+
+                #menu-occhi div{
+                    display: flex;
+                    flex-wrap: wrap;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    gap: 10px;
+                }
+
+                #menu-occhi span {
+                    flex-basis: 100%;
+                    margin: 0 0 10px 0;
+                    padding: 10px 0;
+                    font-size: 12px;
+                    border-bottom: 1px solid black;
+                }
+
+                .menus label {
+                    flex-basis: 48%;
+                }
+
+                #menu-occhi label {
+                    flex-basis: 19%;
+                }
+
+                #menu-bocca label, #menu-cappello label {
+                    flex-basis: 48%;
+                }
+
+                .interfaccia input {
+                    display: none;
+                }
+                
+                .interfaccia label:hover {
+                    background-color: #ebebeb;
+                }
+
+                .interfaccia nav input:checked+label{
+                    outline: 1px solid black;
+                }
+
+                .interfaccia input:checked+label img{
+                    outline: rgb(0, 0, 0) solid 1px;
+                    animation: none;
+                }
+
+                .tip {
+                    color: black;
+                    background-color: white;
+                    outline: 1px solid black;
+                    padding: 10px;
+                    margin: 20px auto;
+                    display: block;
+                    width: max-content;
+
+                }
+
+                .background {
+                    background-color: #f0f0f0;
+                    flex-grow: 8;
+                }
+
+                .container {
+                    width: 600px;
+                    height: 600px;
+                    position: relative;
+                    margin: 0 auto;
+                    transform: translateY(20%);
+
+                }
+/*
+                .container div {
+                    outline: #000 solid 1px;
+                }
+*/
+                .faccia {
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                }
+
+                .cappello {
+                    position: absolute;
+                    width: 700px;
+                    height: 55%;
+                    left: 50%;
+                    top: -15%;
+                    margin-left: -350px;
+
+                }
+
+                .bocca {
+                    position: absolute;
+                    width: 60%;
+                    height: 30%;
+                    left: 20%;
+                    bottom: 17%;
+                }
+
+                .occhio {
+
+                    position: absolute;
+                    width: 30%;
+                    height: 30%;
+                    top: 17%;
+                }
+
+                .sx {
+                    left: 15%;
+                }
+
+                .dx {
+                    right: 15%;
+                }

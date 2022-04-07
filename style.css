@@ -39,7 +39,6 @@
                 }
 
                 .interfaccia {
-                    padding: 15px;
                     height: 100vh;
                     border-left: 1px solid black;
                     width: 400px;
@@ -51,7 +50,7 @@
                     justify-content: space-between;
                     flex-flow: row;
                     padding-bottom: 15px;
-                    margin-bottom: 15px;
+                    margin: 15px;
                     border-bottom: 1px black solid;
                     column-gap: 2%;
                 }
@@ -59,6 +58,8 @@
                 .interfaccia nav label {
                     flex-basis: 90%;
                     padding: 10px 0px;
+                    text-align: center;
+                    font-size: 11px;
                 }
 /*
                 .interfaccia nav *{
@@ -69,7 +70,7 @@
                     display: block;
                     width: auto;
                     height: 30px;
-                    margin: 0 auto;
+                    margin: 0 auto 10px auto;
                 }
 
                 div.menus {
@@ -78,6 +79,7 @@
                     flex-direction: row;
                     justify-content: space-between;
                     gap: 10px;
+                    padding: 10px;
                 }
 
                 #menu-occhi {
@@ -110,6 +112,7 @@
 
                 #menu-bocca label, #menu-cappello label {
                     flex-basis: 48%;
+                    row-gap: 20px;
                 }
 
                 .interfaccia input {
@@ -137,7 +140,6 @@
                     margin: 20px auto;
                     display: block;
                     width: max-content;
-
                 }
 
                 .background {
